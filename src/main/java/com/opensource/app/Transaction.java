@@ -5,6 +5,14 @@ package com.opensource.app;
  */
 public class Transaction {
     public int amount;
-    public Client from;
-    public Client to;
+    public Miner from;
+    public Miner to;
+
+    public Transaction(int amount, Miner from, Miner to) {
+
+    }
+
+    protected Transaction clone() throws CloneNotSupportedException {
+        return new Transaction(amount, from, to);
+    }
 }
